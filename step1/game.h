@@ -7,7 +7,7 @@
 typedef struct grid {
     int nbrows; 	  //number of rows
     int nbcols; 	 //number of cols
-    int **cells; 	//table consist of cells
+    int **cells = NULL; 	//table consist of cells
     int age; 	   //age of grid
 } grid;
 
