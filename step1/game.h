@@ -7,7 +7,7 @@
 typedef struct grid {
     int nbrows; 	  //number of rows
     int nbcols; 	 //number of cols
-    int **cells = NULL; 	//table consist of cells
+    int **cells; 	//table consist of cells
     int age; 	   //age of grid
 } grid;
 
@@ -26,6 +26,7 @@ void init_grid(grid* g);
 //set alive a certain cell in the grid
 static inline void set_alive(int i, int j, grid g){g.cells[i][j] = 1;}
 
+static inline void set_dead(int i, int j, grid g){g.cells[i][j] = -1;}
 
 //checks if cells is alive
 static inline int is_alive(int i, int j, grid g){return g.cells[i][j] == 1;}

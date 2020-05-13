@@ -12,7 +12,15 @@ void init_grid (grid* g){
 	allocate_grid(s,g);
 
 	printf("Enter the number of alive cells in the matrix: ");
-	scanf("%d", &alive);
+	
+	while(1){
+		scanf("%d", &alive);
+		if(alive < (g->nbrows * g->nbcols))
+			break;
+		else
+			printf("The number of living cells should be at most of size (number of all cells) of the grid\n");
+	}
+
 	for (n = 0; n < alive; ++n){
 	
 		while(1){
@@ -24,6 +32,13 @@ void init_grid (grid* g){
 		}	
 		
 		set_alive(i,j,*g);
+	}
+
+	for(i=0; i<g->nbrows;i++){
+		for(j=0;j<g->nbcols;j++){
+			if(!is_alive(i,j,*g))
+				set_dead(i,j,*g);
+		}
 	}
 
 	g->age = 0;

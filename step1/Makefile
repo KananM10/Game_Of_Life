@@ -1,7 +1,7 @@
 CC = gcc
 
 
-all: gameOfLife
+all: clean gameOfLife
 
 gameOfLife: main.c
 	$(CC) main.c -o gameOfLife
