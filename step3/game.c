@@ -12,15 +12,7 @@ void init_grid (grid* g){
 	allocate_grid(s,g);
 
 	printf("Enter the number of alive cells in the matrix: ");
-
-	while(1){
-		scanf("%d", &alive);
-		if(alive <= (g->nbrows * g->nbcols) )
-			break;
-		else
-			printf("The number of alive cells could be at maximum of number of all cells (row*col)\n");
-	}
-	
+	scanf("%d", &alive);
 	for (n = 0; n < alive; ++n){
 	
 		while(1){
@@ -88,43 +80,59 @@ void copy_grid (grid gs, grid gd){
 	return;
 }
 
+//-----------------------------------------------------------------------------
+
+int check_neighbours_circular(int i, int j, grid g){
+	int v = 0, r = g.nbrows, c = g.nbcols;
+	v+= is_alive(module(i-1,r),module(j-1,c),g); 	// left top
+	v+= is_alive(module(i-1,r),module(j,c),g); 		// top same col
+	v+= is_alive(module(i-1,r),module(j+1,c),g);	// right top
+	v+= is_alive(module(i,r),module(j-1,c),g);		// same row left
+	v+= is_alive(module(i,r),module(j+1,c),g);		// same row right
+	v+= is_alive(module(i+1,r),module(j-1,c),g);	// bottom left
+	v+= is_alive(module(i+1,r),module(j,c),g);		//bottom same col
+	v+= is_alive(module(i+1,r),module(j+1,c),g);	//bottom right
+
+	return v;
+}
+
 //---------------------------------------------------------------------
 
-int check_neighbours(int i, int j, grid g){
-	int v = 0;
-	v += i > 0 && j > 0 && is_alive(i-1, j-1, g); 					// left top
-	v += i > 0 && is_alive(i-1, j, g); 								// top same col
-	v += i > 0 && j < g.nbcols && is_alive(i-1, j+1, g); 			// right top
-	v += j > 0 && is_alive(i, j-1, g); 								// same row left
-	v += j < g.nbcols && is_alive(i, j+1, g); 						// same row right
-	v += i < g.nbrows -1 && j > 0 && is_alive(i+1, j-1, g); 		// bottom left
-	v += i < g.nbrows -1 && is_alive(i+1, j, g); 					// bottom same col
-	v += i < g.nbrows -1 && j < g.nbcols && is_alive(i+1, j+1, g); 	// bottom right
+int check_neighbours_clipped(int i, int j, grid g){
+	int v = 0, r = g.nbrows, c = g.nbcols;
+	v += i > 0 && j > 0 && is_alive(i-1, j-1, g); 		// left top
+	v += i > 0 && is_alive(i-1, j, g); 					// top same col
+	v += i > 0 && j < c && is_alive(i-1, j+1, g); 		// right top
+	v += j > 0 && is_alive(i, j-1, g); 					// same row left
+	v += j < c && is_alive(i, j+1, g); 					// same row right
+	v += i < r -1 && j > 0 && is_alive(i+1, j-1, g); 	// bottom left
+	v += i < r -1 && is_alive(i+1, j, g); 				// bottom same col
+	v += i < r -1 && j < c && is_alive(i+1, j+1, g); 	// bottom right
 	return v;
 }
 
 //---------------------------------------------------------------------
 
 
-void evoluation (grid *g, grid *gc){
+void evoluation (grid *g, grid *gc, int (*check_neighbours)(int, int, grid)){
     copy_grid(*g,*gc); 
-    int i,j, v;
-    for (i = 0; i < g->nbrows; i++){
-  		for (j = 0; j < g->nbcols; j++){
+    int i,j,r = g->nbrows, c = g->nbcols, v;
+    for (i = 0; i < r; i++){
+  		for (j = 0; j < c; ++j){
 		    if(!is_dead(i, j, *g)){
 				v = check_neighbours(i, j, *gc);
 				if (is_alive(i,j,*g)){ 
-				  if ( v != 2 && v != 3 ){
-				  	set_dead(i,j,*g);
+				  if ( v != 2 && v != 3 ) {
+				  	set_dead(i, j, *g);
 				  }
 				}else if ( v == 3 ) {
-				    set_alive(i,j,*g);
+				    set_alive(i, j, *g);
 				}
 			}
         }
   	}
-  	gc->age++;
-  	return;
+  gc->age++;
+  return;
 }
 
 //---------------------------------------------------------------------

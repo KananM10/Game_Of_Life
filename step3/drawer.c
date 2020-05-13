@@ -2,11 +2,15 @@
 
 //-------------------------------------------------------------------------
 
-void set_grid (grid g){
+void set_grid (grid g, int mode){
 	delete_ecran();
 
+	if(mode) 
+		printf("Mode circular\n");
+	else 
+		printf("Mode clipped\n");
 	printf("Evoluation: %d\n", g.age);
-
+	printf("To exit from program click q\n");
 	hide_cursor();
 
 	for(int i= 0; i < g.nbrows; ++i){
@@ -26,24 +30,38 @@ void set_grid (grid g){
 //-------------------------------------------------------------------------
 
 void start_game(grid *g, grid *gc){
-	set_grid(*gc);
+	int circular = 1;
+	set_grid(*gc,circular);
 	char c = getchar();
-	while (c != 'q')
+	int (*pt_neighbours)(int, int, grid) = check_neighbours_clipped;
+	while (c != 'q') 
 	{
 		switch (c) {
             case '\n' :
             { 
-                evoluation(g, gc);
+                evoluation(g, gc, pt_neighbours);
                 break;
             }
-            default:
+            
+            case 'c':
+            { 
+                circular = !circular;
+                if(circular) 
+                	pt_neighbours = &check_neighbours_circular;
+                else 
+                	pt_neighbours = &check_neighbours_clipped;
+                getchar ();
+                break;
+            }
+            
+            default :
             {
                 printf("\n\e[1A");
                 break;
             }
         }
 		
-        set_grid(*gc);
+        set_grid(*gc,circular);
         c = getchar();
     	
     }
