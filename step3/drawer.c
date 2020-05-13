@@ -31,7 +31,6 @@ void set_grid (grid g, int mode){
 
 void start_game(grid *g, grid *gc){
 	int circular = 1;
-	set_grid(*gc,circular);
 	char c = getchar();
 	int (*pt_neighbours)(int, int, grid) = check_neighbours_clipped;
 	while (c != 'q') 

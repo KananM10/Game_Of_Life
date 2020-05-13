@@ -30,8 +30,19 @@ void start_game(grid *g, grid *gc){
 	while (c != 'q')
 	{
 
-        if(c == '\n')
-        	evoluation(g, gc);
+        switch (c) {
+            case '\n' :
+            { 
+                evoluation(g, gc);
+                break;
+            }
+            
+            default :
+            {
+                printf("\n\e[1A");
+                break;
+            }
+        }
         
 		
         set_grid(*gc);

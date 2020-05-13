@@ -25,13 +25,6 @@ void init_grid (grid* g){
 		set_alive(i,j,*g);
 	}
 
-	for(i=0; i<g->nbrows;i++){
-		for(j=0;j<g->nbcols;j++){
-			if(!is_alive(i,j,*g))
-				set_dead(i,j,*g);
-		}
-	}
-
 	g->age = 0;
 	return;
 }
@@ -43,10 +36,10 @@ void allocate_grid(int size, grid*  g){
 	g->nbcols = size;
   	g->age = 0;
 
-	g->cells = calloc(g->nbrows, sizeof(int*));
+	g->cells = calloc(g->nbrows, 2*sizeof(int*));
 	if(g->cells != NULL){
         for(int i = 0; i < g->nbrows; ++i) {
-            g->cells[i] = calloc(g->nbcols, sizeof(int));
+            g->cells[i] = calloc(g->nbcols, 2*sizeof(int));
             if (g->cells[i] == NULL) {
               printf("Impossible to allocate memory.\n");
               exit(0);
@@ -119,16 +112,16 @@ void evoluation (grid *g, grid *gc, int (*check_neighbours)(int, int, grid)){
     int i,j,r = g->nbrows, c = g->nbcols, v;
     for (i = 0; i < r; i++){
   		for (j = 0; j < c; ++j){
-		    if(!is_dead(i, j, *g)){
-				v = check_neighbours(i, j, *gc);
-				if (is_alive(i,j,*g)){ 
-				  if ( v != 2 && v != 3 ) {
-				  	set_dead(i, j, *g);
-				  }
-				}else if ( v == 3 ) {
-				    set_alive(i, j, *g);
-				}
+			
+			v = check_neighbours(i, j, *gc);
+			if (is_alive(i,j,*g)){ 
+			  if ( v != 2 && v != 3 ) {
+			  	set_dead(i, j, *g);
+			  }
+			}else if ( v == 3 ) {
+			    set_alive(i, j, *g);
 			}
+			
         }
   	}
   gc->age++;

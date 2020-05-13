@@ -45,12 +45,12 @@ void delete_grid (grid g){ printf("\n\e[%dA",g.nbrows*2 + 7); }
 /**
  * set dead a certain cell in the grid
  */
-static inline void set_dead(int i, int j, grid g){g.cells[i][j] = -1;}
+static inline void set_dead(int i, int j, grid g){g.cells[i][j] = 0;}
 
 /**
  * checks if cell is dead
  */
-static inline int is_dead(int i, int j, grid g){return g.cells[i][j] == -1;}
+static inline int is_dead(int i, int j, grid g){return g.cells[i][j] == 0;}
 
 
 void copy_grid (grid gs, grid gd);
