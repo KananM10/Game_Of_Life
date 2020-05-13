@@ -26,4 +26,6 @@ void reset(){ printf("\033[0m"); }
 
 void delete_ecran(){ printf("\e[1;1H\e[2J"); }
 
+
+
 #endif

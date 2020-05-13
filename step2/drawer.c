@@ -6,7 +6,7 @@ void set_grid (grid g){
 	delete_ecran();
 
 	printf("Evoluation: %d\n", g.age);
-
+	printf("To quit from the game push q. \n");
 	hide_cursor();
 
 	for(int i= 0; i < g.nbrows; ++i){
@@ -26,22 +26,13 @@ void set_grid (grid g){
 //-------------------------------------------------------------------------
 
 void start_game(grid *g, grid *gc){
-	set_grid(*gc);
 	char c = getchar();
 	while (c != 'q')
 	{
-		switch (c) {
-            case '\n' :
-            { 
-                evoluation(g, gc);
-                break;
-            }
-            default:
-            {
-                printf("\n\e[1A");
-                break;
-            }
-        }
+
+        if(c == '\n')
+        	evoluation(g, gc);
+        
 		
         set_grid(*gc);
         c = getchar();
