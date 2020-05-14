@@ -1,13 +1,22 @@
 CC = gcc
 
+all: gameOfLife
 
-all: clean gameOfLife
+gameOfLife: main.o drawer.o game.o
+	$(CC) main.o drawer.o game.o -o gameOfLife
 
-gameOfLife: main.c
-	$(CC) main.c -o gameOfLife
+main.o: main.c
+	$(CC) -c main.c 
+
+drawer.o: drawer.c drawer.h game.h
+	$(CC) -c drawer.c
+
+game.o: game.c game.h
+	$(CC) -c game.c
+
 
 clean: 
-	rm -f gameOfLife
+	rm gameOfLife *.o
 
 doc:
 	@doxygen
@@ -18,3 +27,5 @@ dist:
 distclean:
 	@rm -r doc
 	@rm -r *.tar.xz
+
+

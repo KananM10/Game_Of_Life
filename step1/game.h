@@ -26,7 +26,7 @@ void init_grid(grid* g);
 //set alive a certain cell in the grid
 static inline void set_alive(int i, int j, grid g){g.cells[i][j] = 1;}
 
-static inline void set_dead(int i, int j, grid g){g.cells[i][j] = -1;}
+static inline void set_dead(int i, int j, grid g){g.cells[i][j] = 0;}
 
 //checks if cells is alive
 static inline int is_alive(int i, int j, grid g){return g.cells[i][j] == 1;}

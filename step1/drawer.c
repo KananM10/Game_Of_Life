@@ -12,7 +12,7 @@ void set_grid (grid g){
 	for(int i= 0; i<g.nbrows; ++i){
 		move_cursor_to(i+2,10);
 		for(int j= 0; j<g.nbcols; ++j){
-			(is_alive(i, j, g)) ? set_color(redbg) : set_color(blackbg);
+			(is_alive(i, j, g)) ? set_color(41) : set_color(40); //41 for red color and 40 for black color
 		}
 	}
 
@@ -26,7 +26,6 @@ void set_grid (grid g){
 //-------------------------------------------------------------------------
 
 void start_game(grid *ga){
-    // set_grid(*ga);
 	char c = getchar();
 	while (c != 'q'){
 		switch (c) {

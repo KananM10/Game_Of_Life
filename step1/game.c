@@ -6,8 +6,14 @@ void init_grid (grid* g){
 
 	int i,j,n,s,alive;
 
-	printf("Enter the size to be in the matrix: ");
-	scanf("%d", &s);
+	printf("Enter the size to be in the matrix, maximum 10: ");
+	while(1){
+		scanf("%d", &s);
+		if(s > 0 && s <= 10)
+			break;
+		else
+			printf("The size of the matrix should be between 0 and 10 included: \n");
+	}
 	
 	allocate_grid(s,g);
 
@@ -32,13 +38,6 @@ void init_grid (grid* g){
 		}	
 		
 		set_alive(i,j,*g);
-	}
-
-	for(i=0; i<g->nbrows;i++){
-		for(j=0;j<g->nbcols;j++){
-			if(!is_alive(i,j,*g))
-				set_dead(i,j,*g);
-		}
 	}
 
 	g->age = 0;

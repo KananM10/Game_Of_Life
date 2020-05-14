@@ -1,8 +1,5 @@
 #include "drawer.h"
-#include "drawer.c"
-
 #include "game.h"
-#include "game.c"
 
 
 int main() {

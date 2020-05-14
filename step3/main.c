@@ -1,8 +1,8 @@
-#include "drawer.h"
-#include "drawer.c"
+#include "./console/drawer.h"
+// #include "drawer.c"
 
-#include "game.h"
-#include "game.c"
+#include "./game/game.h"
+// #include "game.c"
 
 
 int main() {
