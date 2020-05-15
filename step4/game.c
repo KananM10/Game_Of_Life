@@ -1,6 +1,5 @@
 #include "game.h"
 
-
 //---------------------------------------------------------------------
 void init_grid (grid* g){
 
@@ -63,7 +62,7 @@ void free_grid(grid* g){
 //---------------------------------------------------------------------
 
 
-void copy_grid (grid gs, grid gd){
+void copy_grid(grid gs, grid gd){
 	int i, j;
 	for (i=0; i<gs.nbrows; ++i) {
 		for (j=0; j<gs.nbcols; ++j) {
@@ -121,7 +120,6 @@ void evoluation (grid *g, grid *gc, int (*check_neighbours)(int, int, grid)){
 			}else if ( v == 3 ) {
 			    set_alive(i, j, *g);
 			}
-			
         }
   	}
   gc->age++;
