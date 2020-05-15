@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kanan/Desktop/L2_S2_2019/Development_Techniques/project_jeu_de_la_vie/practice/console/drawer.h
+stdio.h
+-
+../game/game.h
+/home/kanan/Desktop/L2_S2_2019/Development_Techniques/project_jeu_de_la_vie/practice/game/game.h
+
+/home/kanan/Desktop/L2_S2_2019/Development_Techniques/project_jeu_de_la_vie/practice/game/game.h
+stdlib.h
+-
+stdio.h
+-
+
+/home/kanan/Desktop/L2_S2_2019/Development_Techniques/project_jeu_de_la_vie/practice/main.c
+./console/drawer.h
+/home/kanan/Desktop/L2_S2_2019/Development_Techniques/project_jeu_de_la_vie/practice/console/drawer.h
+./game/game.h
+/home/kanan/Desktop/L2_S2_2019/Development_Techniques/project_jeu_de_la_vie/practice/game/game.h
+

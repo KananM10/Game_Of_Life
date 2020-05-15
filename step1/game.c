@@ -6,13 +6,27 @@ void init_grid (grid* g){
 
 	int i,j,n,s,alive;
 
-	printf("Enter the size to be in the matrix: ");
-	scanf("%d", &s);
+	printf("Enter the size to be in the matrix, maximum 10: ");
+	while(1){
+		scanf("%d", &s);
+		if(s > 0 && s <= 10)
+			break;
+		else
+			printf("The size of the matrix should be between 0 and 10 included: \n");
+	}
 	
 	allocate_grid(s,g);
 
 	printf("Enter the number of alive cells in the matrix: ");
-	scanf("%d", &alive);
+	
+	while(1){
+		scanf("%d", &alive);
+		if(alive < (g->nbrows * g->nbcols))
+			break;
+		else
+			printf("The number of living cells should be at most of size (number of all cells) of the grid\n");
+	}
+
 	for (n = 0; n < alive; ++n){
 	
 		while(1){

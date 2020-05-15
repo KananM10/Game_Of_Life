@@ -3,8 +3,23 @@
 
 #include <stdio.h>
 #include "game.h"
-#include "ansi.h"
 
+
+//some functions to help run game in the terminal (ansi code)
+
+static inline void clear_screen(){ printf("\033[2J"); }
+
+static inline void hide_cursor(){ printf("\033[?25l"); }
+
+static inline void show_cursor(){ printf("\033[?25h"); }
+
+static inline void move_cursor_to(int y,int x){ printf("\033[%d;%dH", y + 5, x); }
+
+static inline void set_color(int c){ printf("\033[%dm  ", c); }
+
+static inline void reset(){ printf("\033[0m"); }
+
+static inline void delete_ecran(){ printf("\e[1;1H\e[2J"); }
 
 //Setting grid in the terminal
 void set_grid (grid g);
