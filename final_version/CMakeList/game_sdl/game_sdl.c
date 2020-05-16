@@ -1,4 +1,5 @@
-#include "game.h"
+#include "game_sdl.h"
+
 
 //---------------------------------------------------------------------
 void init_grid (grid* g){
@@ -26,6 +27,33 @@ void init_grid (grid* g){
 
 	g->age = 0;
 	return;
+}
+
+//---------------------------------------------------------------------
+
+void init_grid_from_file (char * filename, grid* g){
+    FILE * pfile;
+    pfile = fopen(filename, "r");
+    // assert (pfile != NULL);
+
+    int i,j,n,size,alive;
+
+    fscanf(pfile, "%d", & size);
+
+
+    allocate_grid(size,g);
+
+    fscanf(pfile, "%d", & alive);
+    for (n=0; n< alive; ++n){
+        fscanf(pfile, "%d", & i);
+        fscanf(pfile, "%d", & j);
+        set_alive(i,j,*g);
+    }
+    
+    fclose (pfile);
+
+    g->age = 0;
+    return;
 }
 
 //---------------------------------------------------------------------
@@ -62,7 +90,7 @@ void free_grid(grid* g){
 //---------------------------------------------------------------------
 
 
-void copy_grid(grid gs, grid gd){
+void copy_grid (grid gs, grid gd){
 	int i, j;
 	for (i=0; i<gs.nbrows; ++i) {
 		for (j=0; j<gs.nbcols; ++j) {
@@ -120,6 +148,7 @@ void evoluation (grid *g, grid *gc, int (*check_neighbours)(int, int, grid)){
 			}else if ( v == 3 ) {
 			    set_alive(i, j, *g);
 			}
+			
         }
   	}
   gc->age++;
@@ -128,73 +157,77 @@ void evoluation (grid *g, grid *gc, int (*check_neighbours)(int, int, grid)){
 
 //---------------------------------------------------------------------
 
-void display_grid ( grid g , SDL_Renderer *g_renderer, SDL_Texture *textTexture, SDL_Texture *textTexture1, SDL_Texture *textTexture2, SDL_Texture *textTexture3, int mode) {
+void display_grid ( grid g , SDL_Renderer *g_renderer, int mode) {
 	
+ //    SDL_Texture *textTexture; 
+ //    SDL_Texture *textTexture1; 
+ //    SDL_Texture *textTexture2; 
+ //    SDL_Texture *textTexture3,
 
-	char *string1 = '\0';
-	if(mode)
-		string1 = "Mode: circular";
-	else
-		string1 = "Mode: clipped";
+	// char *string1 = '\0';
+	// if(mode)
+	// 	string1 = "Mode: circular";
+	// else
+	// 	string1 = "Mode: clipped";
 
-	char string[16];
-	sprintf(string, "Evoluation: %d", g.age);
+	// char string[16];
+	// sprintf(string, "Evoluation: %d", g.age);
 
-	TTF_Init();
-    TTF_Font *font = TTF_OpenFont("ArialMT.ttf", 25);
-    SDL_Color textColor = { 131, 148, 150};
+	// TTF_Init();
+ //    TTF_Font *font = TTF_OpenFont("ArialMT.ttf", 25);
+ //    SDL_Color textColor = { 131, 148, 150};
    
-   //--------------------------------------------------------------------------------------------------
-    SDL_Surface *textSurface = TTF_RenderText_Solid(font, "To evoluate push n", textColor);
-    textTexture = SDL_CreateTextureFromSurface(g_renderer, textSurface);
+ //   //--------------------------------------------------------------------------------------------------
+ //    SDL_Surface *textSurface = TTF_RenderText_Solid(font, "To evoluate push n", textColor);
+ //    textTexture = SDL_CreateTextureFromSurface(g_renderer, textSurface);
 
-    SDL_Rect textRect;
-    textRect.x = 420;
-    textRect.y = 10;
-    textRect.w = textSurface->w;
-    textRect.h = textSurface->h;
+ //    SDL_Rect textRect;
+ //    textRect.x = 420;
+ //    textRect.y = 10;
+ //    textRect.w = textSurface->w;
+ //    textRect.h = textSurface->h;
 
-    SDL_FreeSurface(textSurface);
+ //    SDL_FreeSurface(textSurface);
 
-    //-----------------------------------------------------------------------------------------------
-    SDL_Surface *textSurface1 = TTF_RenderText_Solid(font, string, textColor);
-    textTexture1 = SDL_CreateTextureFromSurface(g_renderer, textSurface1);
+ //    //-----------------------------------------------------------------------------------------------
+ //    SDL_Surface *textSurface1 = TTF_RenderText_Solid(font, string, textColor);
+ //    textTexture1 = SDL_CreateTextureFromSurface(g_renderer, textSurface1);
 
-    SDL_Rect textRect1;
-    textRect1.x = 420;
-    textRect1.y = 40;
-    textRect1.w = textSurface1->w;
-    textRect1.h = textSurface1->h;
+ //    SDL_Rect textRect1;
+ //    textRect1.x = 420;
+ //    textRect1.y = 40;
+ //    textRect1.w = textSurface1->w;
+ //    textRect1.h = textSurface1->h;
 
-    SDL_FreeSurface(textSurface1);
+ //    SDL_FreeSurface(textSurface1);
 
-    //---------------------------------------------------------------------------------------------
-    SDL_Surface *textSurface2 = TTF_RenderText_Solid(font, "To change mode push c", textColor);
-    textTexture2 = SDL_CreateTextureFromSurface(g_renderer, textSurface2);
+ //    //---------------------------------------------------------------------------------------------
+ //    SDL_Surface *textSurface2 = TTF_RenderText_Solid(font, "To change mode push c", textColor);
+ //    textTexture2 = SDL_CreateTextureFromSurface(g_renderer, textSurface2);
 
-    SDL_Rect textRect2;
-    textRect2.x = 420;
-    textRect2.y = 70;
-    textRect2.w = textSurface2->w;
-    textRect2.h = textSurface2->h;
+ //    SDL_Rect textRect2;
+ //    textRect2.x = 420;
+ //    textRect2.y = 70;
+ //    textRect2.w = textSurface2->w;
+ //    textRect2.h = textSurface2->h;
 
-    SDL_FreeSurface(textSurface2);
+ //    SDL_FreeSurface(textSurface2);
 
 
-    //------------------------------------------------------------------------------------------------
-    SDL_Surface *textSurface3 = TTF_RenderText_Solid(font, string1, textColor);
-    textTexture3 = SDL_CreateTextureFromSurface(g_renderer, textSurface3);
+ //    //------------------------------------------------------------------------------------------------
+ //    SDL_Surface *textSurface3 = TTF_RenderText_Solid(font, string1, textColor);
+ //    textTexture3 = SDL_CreateTextureFromSurface(g_renderer, textSurface3);
 
-    SDL_Rect textRect3;
-    textRect3.x = 420;
-    textRect3.y = 100;
-    textRect3.w = textSurface3->w;
-    textRect3.h = textSurface3->h;
+ //    SDL_Rect textRect3;
+ //    textRect3.x = 420;
+ //    textRect3.y = 100;
+ //    textRect3.w = textSurface3->w;
+ //    textRect3.h = textSurface3->h;
 
-    SDL_FreeSurface(textSurface3);
+ //    SDL_FreeSurface(textSurface3);
 
-    //----------------------------------------------------------------------------------------------
-    TTF_Quit();
+ //    //----------------------------------------------------------------------------------------------
+ //    TTF_Quit();
 
     
     /* Set draw colour to white */
@@ -242,10 +275,15 @@ void display_grid ( grid g , SDL_Renderer *g_renderer, SDL_Texture *textTexture,
             }
         }
     }
-    SDL_RenderCopy(g_renderer, textTexture, NULL, &textRect);
-    SDL_RenderCopy(g_renderer, textTexture1, NULL, &textRect1);
-    SDL_RenderCopy(g_renderer, textTexture2, NULL, &textRect2);
-    SDL_RenderCopy(g_renderer, textTexture3, NULL, &textRect3);
+    // SDL_RenderCopy(g_renderer, textTexture, NULL, &textRect);
+    // SDL_RenderCopy(g_renderer, textTexture1, NULL, &textRect1);
+    // SDL_RenderCopy(g_renderer, textTexture2, NULL, &textRect2);
+    // SDL_RenderCopy(g_renderer, textTexture3, NULL, &textRect3);
 
     SDL_RenderPresent(g_renderer);
+
+    // SDL_DestroyTexture(textTexture);
+    // SDL_DestroyTexture(textTexture1);
+    // SDL_DestroyTexture(textTexture2);
+    // SDL_DestroyTexture(textTexture3);
 }

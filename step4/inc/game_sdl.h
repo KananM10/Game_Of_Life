@@ -1,5 +1,5 @@
-#ifndef __GAME_H__
-#define __GAME_H__
+#ifndef __GAME_SDL_H__
+#define __GAME_SDL_H__
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -20,6 +20,8 @@ typedef struct grid {
  * allocate matrix with the size row * col and set all cells to dead
  */
 void allocate_grid (int size, grid* g);
+
+void init_grid_from_file (char * filename, grid* g);
 
 /**
  * frees the grid
@@ -75,7 +77,7 @@ void evoluation (grid *g, grid *gc, int (*check_neighbours)(int, int, grid));
 
 static inline int module(int a, int b){ return ((a+b)%b); }
 
-void display_grid ( grid g , SDL_Renderer *g_renderer, SDL_Texture *textTexture, SDL_Texture *textTexture1, SDL_Texture *textTexture2, SDL_Texture *textTexture3, int mode);
+void display_grid ( grid g , SDL_Renderer *g_renderer, int mode);
 
 
 #endif
