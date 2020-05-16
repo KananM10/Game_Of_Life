@@ -1,0 +1,1 @@
+/usr/bin/cc   -rdynamic CMakeFiles/gameOfLife.dir/main_sdl.c.o  -o gameOfLife  game_sdl/libgame_sdl.a game_sdl/libgame_sdl.a -lSDL2 
