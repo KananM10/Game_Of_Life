@@ -13,4 +13,5 @@ pipelines:
         name: testing
         script: 
         - cd final_version/makeFile
+        - make test
         - ./bin/ctest
