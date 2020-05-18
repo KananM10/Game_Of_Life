@@ -4,7 +4,7 @@ pipelines:
     - step:
         name: building
         script: 
-        - cd ./final_version/makeFile
+        - cd final_version/makeFile
         - make MODE=TEXT
         - ./bin/gameOfLife
         artifacts:
@@ -12,5 +12,5 @@ pipelines:
     - step:
         name: testing
         script: 
-        - cd ./final_version/makeFile
+        - cd final_version/makeFile
         - ./bin/ctest
