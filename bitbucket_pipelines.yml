@@ -5,7 +5,7 @@ pipelines:
         name: building
         script: 
         - cd ./final_version/makeFile
-        - make
+        - make MODE=TEXT
         - ./bin/gameOfLife
         artifacts:
         - makeFile/**
