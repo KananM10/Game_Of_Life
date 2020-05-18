@@ -22,4 +22,5 @@ jobs:
     - name: 'Testing'
       run: |
         cd final_version/makeFile
+        make test
         ./bin/ctest
