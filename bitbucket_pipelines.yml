@@ -1,0 +1,16 @@
+image: KananM10/imgdev
+pipelines:
+  default:
+    - step:
+        name: building
+        script: 
+        - cd ./final_version/makeFile
+        - make
+        - ./bin/gameOfLife
+        artifacts:
+        - makeFile/**
+    - step:
+        name: testing
+        script: 
+        - cd ./final_version/makeFile
+        - ./bin/ctest
