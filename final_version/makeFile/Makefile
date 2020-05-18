@@ -28,10 +28,13 @@ $(BIN)/$(TARGET) : $(OBJECT)
 $(BIN)/%.o : $(SRC)/%.c
 	$(CC) $< -c -o $@ $(CFLAGS)
 
+$(BIN)/test: $(SRC)/ctest.c $(SRC)/game.c
+	$(CC) $(SRC)/game.c $(SRC)/ctest.c -o $(BIN)/ctest -lcunit -I$(INC) -I/lib/include -L/lib/CUnit/lib
+
 
 #------------------------------------------
 
-all: clean $(BIN)/$(TARGET) 
+all: clean $(BIN)/test
 
 run: 
 	$(BIN)/$(TARGET)
