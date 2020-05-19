@@ -14,12 +14,13 @@ jobs:
       run: sudo apt update && sudo apt install libcunit1-dev gcovr && sudo apt-get install libsdl2-dev
     - name: 'Compile'
       run: |
+        cd final
         mkdir BuildCI
         cd BuildCI
         cmake ..
         cmake --build .
     - name: 'Testing'
       run: |
-        cd BuildCI
+        cd final/BuildCI
         chmod +x *
         ctest -V
