@@ -63,10 +63,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kanan/Desktop/L2_S2_2019/Development_Techniques/project_jeu_de_la_vie/merge
+CMAKE_SOURCE_DIR = /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kanan/Desktop/L2_S2_2019/Development_Techniques/project_jeu_de_la_vie/merge/build
+CMAKE_BINARY_DIR = /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build
 
 # Include any dependencies generated for this target.
 include game_sdl/CMakeFiles/game_sdl.dir/depend.make
@@ -79,16 +79,16 @@ include game_sdl/CMakeFiles/game_sdl.dir/flags.make
 
 game_sdl/CMakeFiles/game_sdl.dir/game_sdl.c.o: game_sdl/CMakeFiles/game_sdl.dir/flags.make
 game_sdl/CMakeFiles/game_sdl.dir/game_sdl.c.o: ../game_sdl/game_sdl.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kanan/Desktop/L2_S2_2019/Development_Techniques/project_jeu_de_la_vie/merge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object game_sdl/CMakeFiles/game_sdl.dir/game_sdl.c.o"
-	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/project_jeu_de_la_vie/merge/build/game_sdl && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/game_sdl.dir/game_sdl.c.o   -c /home/kanan/Desktop/L2_S2_2019/Development_Techniques/project_jeu_de_la_vie/merge/game_sdl/game_sdl.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object game_sdl/CMakeFiles/game_sdl.dir/game_sdl.c.o"
+	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/game_sdl && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/game_sdl.dir/game_sdl.c.o   -c /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/game_sdl/game_sdl.c
 
 game_sdl/CMakeFiles/game_sdl.dir/game_sdl.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/game_sdl.dir/game_sdl.c.i"
-	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/project_jeu_de_la_vie/merge/build/game_sdl && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/kanan/Desktop/L2_S2_2019/Development_Techniques/project_jeu_de_la_vie/merge/game_sdl/game_sdl.c > CMakeFiles/game_sdl.dir/game_sdl.c.i
+	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/game_sdl && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/game_sdl/game_sdl.c > CMakeFiles/game_sdl.dir/game_sdl.c.i
 
 game_sdl/CMakeFiles/game_sdl.dir/game_sdl.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/game_sdl.dir/game_sdl.c.s"
-	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/project_jeu_de_la_vie/merge/build/game_sdl && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/kanan/Desktop/L2_S2_2019/Development_Techniques/project_jeu_de_la_vie/merge/game_sdl/game_sdl.c -o CMakeFiles/game_sdl.dir/game_sdl.c.s
+	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/game_sdl && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/game_sdl/game_sdl.c -o CMakeFiles/game_sdl.dir/game_sdl.c.s
 
 # Object files for target game_sdl
 game_sdl_OBJECTS = \
@@ -100,9 +100,9 @@ game_sdl_EXTERNAL_OBJECTS =
 game_sdl/libgame_sdl.a: game_sdl/CMakeFiles/game_sdl.dir/game_sdl.c.o
 game_sdl/libgame_sdl.a: game_sdl/CMakeFiles/game_sdl.dir/build.make
 game_sdl/libgame_sdl.a: game_sdl/CMakeFiles/game_sdl.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kanan/Desktop/L2_S2_2019/Development_Techniques/project_jeu_de_la_vie/merge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libgame_sdl.a"
-	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/project_jeu_de_la_vie/merge/build/game_sdl && $(CMAKE_COMMAND) -P CMakeFiles/game_sdl.dir/cmake_clean_target.cmake
-	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/project_jeu_de_la_vie/merge/build/game_sdl && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/game_sdl.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libgame_sdl.a"
+	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/game_sdl && $(CMAKE_COMMAND) -P CMakeFiles/game_sdl.dir/cmake_clean_target.cmake
+	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/game_sdl && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/game_sdl.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 game_sdl/CMakeFiles/game_sdl.dir/build: game_sdl/libgame_sdl.a
@@ -110,10 +110,10 @@ game_sdl/CMakeFiles/game_sdl.dir/build: game_sdl/libgame_sdl.a
 .PHONY : game_sdl/CMakeFiles/game_sdl.dir/build
 
 game_sdl/CMakeFiles/game_sdl.dir/clean:
-	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/project_jeu_de_la_vie/merge/build/game_sdl && $(CMAKE_COMMAND) -P CMakeFiles/game_sdl.dir/cmake_clean.cmake
+	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/game_sdl && $(CMAKE_COMMAND) -P CMakeFiles/game_sdl.dir/cmake_clean.cmake
 .PHONY : game_sdl/CMakeFiles/game_sdl.dir/clean
 
 game_sdl/CMakeFiles/game_sdl.dir/depend:
-	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/project_jeu_de_la_vie/merge/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kanan/Desktop/L2_S2_2019/Development_Techniques/project_jeu_de_la_vie/merge /home/kanan/Desktop/L2_S2_2019/Development_Techniques/project_jeu_de_la_vie/merge/game_sdl /home/kanan/Desktop/L2_S2_2019/Development_Techniques/project_jeu_de_la_vie/merge/build /home/kanan/Desktop/L2_S2_2019/Development_Techniques/project_jeu_de_la_vie/merge/build/game_sdl /home/kanan/Desktop/L2_S2_2019/Development_Techniques/project_jeu_de_la_vie/merge/build/game_sdl/CMakeFiles/game_sdl.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/game_sdl /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/game_sdl /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/game_sdl/CMakeFiles/game_sdl.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : game_sdl/CMakeFiles/game_sdl.dir/depend
 

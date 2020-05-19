@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/kanan/Desktop/L2_S2_2019/Development_Techniques/project_jeu_de_la_vie/merge/main_sdl.c" "/home/kanan/Desktop/L2_S2_2019/Development_Techniques/project_jeu_de_la_vie/merge/build/CMakeFiles/gameOfLife.dir/main_sdl.c.o"
+  "/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/main_sdl.c" "/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/CMakeFiles/gameOfLife.dir/main_sdl.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -16,7 +16,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/kanan/Desktop/L2_S2_2019/Development_Techniques/project_jeu_de_la_vie/merge/build/game_sdl/CMakeFiles/game_sdl.dir/DependInfo.cmake"
+  "/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/game_sdl/CMakeFiles/game_sdl.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

@@ -68,10 +68,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kanan/Desktop/L2_S2_2019/Development_Techniques/project_jeu_de_la_vie/merge
+CMAKE_SOURCE_DIR = /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kanan/Desktop/L2_S2_2019/Development_Techniques/project_jeu_de_la_vie/merge/build
+CMAKE_BINARY_DIR = /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -146,14 +146,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/project_jeu_de_la_vie/merge/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/kanan/Desktop/L2_S2_2019/Development_Techniques/project_jeu_de_la_vie/merge/build/CMakeFiles /home/kanan/Desktop/L2_S2_2019/Development_Techniques/project_jeu_de_la_vie/merge/build/game_sdl/CMakeFiles/progress.marks
-	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/project_jeu_de_la_vie/merge/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game_sdl/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kanan/Desktop/L2_S2_2019/Development_Techniques/project_jeu_de_la_vie/merge/build/CMakeFiles 0
+	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/CMakeFiles /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/game_sdl/CMakeFiles/progress.marks
+	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game_sdl/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/project_jeu_de_la_vie/merge/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game_sdl/clean
+	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game_sdl/clean
 .PHONY : clean
 
 # The main clean target
@@ -163,22 +163,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/project_jeu_de_la_vie/merge/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game_sdl/preinstall
+	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game_sdl/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/project_jeu_de_la_vie/merge/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game_sdl/preinstall
+	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game_sdl/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/project_jeu_de_la_vie/merge/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 game_sdl/CMakeFiles/game_sdl.dir/rule:
-	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/project_jeu_de_la_vie/merge/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game_sdl/CMakeFiles/game_sdl.dir/rule
+	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game_sdl/CMakeFiles/game_sdl.dir/rule
 .PHONY : game_sdl/CMakeFiles/game_sdl.dir/rule
 
 # Convenience name for target.
@@ -188,7 +188,7 @@ game_sdl: game_sdl/CMakeFiles/game_sdl.dir/rule
 
 # fast build rule for target.
 game_sdl/fast:
-	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/project_jeu_de_la_vie/merge/build && $(MAKE) $(MAKESILENT) -f game_sdl/CMakeFiles/game_sdl.dir/build.make game_sdl/CMakeFiles/game_sdl.dir/build
+	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build && $(MAKE) $(MAKESILENT) -f game_sdl/CMakeFiles/game_sdl.dir/build.make game_sdl/CMakeFiles/game_sdl.dir/build
 .PHONY : game_sdl/fast
 
 game_sdl.o: game_sdl.c.o
@@ -197,7 +197,7 @@ game_sdl.o: game_sdl.c.o
 
 # target to build an object file
 game_sdl.c.o:
-	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/project_jeu_de_la_vie/merge/build && $(MAKE) $(MAKESILENT) -f game_sdl/CMakeFiles/game_sdl.dir/build.make game_sdl/CMakeFiles/game_sdl.dir/game_sdl.c.o
+	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build && $(MAKE) $(MAKESILENT) -f game_sdl/CMakeFiles/game_sdl.dir/build.make game_sdl/CMakeFiles/game_sdl.dir/game_sdl.c.o
 .PHONY : game_sdl.c.o
 
 game_sdl.i: game_sdl.c.i
@@ -206,7 +206,7 @@ game_sdl.i: game_sdl.c.i
 
 # target to preprocess a source file
 game_sdl.c.i:
-	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/project_jeu_de_la_vie/merge/build && $(MAKE) $(MAKESILENT) -f game_sdl/CMakeFiles/game_sdl.dir/build.make game_sdl/CMakeFiles/game_sdl.dir/game_sdl.c.i
+	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build && $(MAKE) $(MAKESILENT) -f game_sdl/CMakeFiles/game_sdl.dir/build.make game_sdl/CMakeFiles/game_sdl.dir/game_sdl.c.i
 .PHONY : game_sdl.c.i
 
 game_sdl.s: game_sdl.c.s
@@ -215,7 +215,7 @@ game_sdl.s: game_sdl.c.s
 
 # target to generate assembly for a file
 game_sdl.c.s:
-	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/project_jeu_de_la_vie/merge/build && $(MAKE) $(MAKESILENT) -f game_sdl/CMakeFiles/game_sdl.dir/build.make game_sdl/CMakeFiles/game_sdl.dir/game_sdl.c.s
+	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build && $(MAKE) $(MAKESILENT) -f game_sdl/CMakeFiles/game_sdl.dir/build.make game_sdl/CMakeFiles/game_sdl.dir/game_sdl.c.s
 .PHONY : game_sdl.c.s
 
 # Help Target
@@ -245,6 +245,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/project_jeu_de_la_vie/merge/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

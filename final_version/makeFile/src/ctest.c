@@ -16,7 +16,8 @@ void test_check_neighb_circular(){
     CU_ASSERT_TRUE(0 == check_neighbours_circular(6,2,g));    
     CU_ASSERT_TRUE(2 == check_neighbours_circular(5,1,g));  
     CU_ASSERT_TRUE(5 == check_neighbours_circular(3,2,g));     
-    CU_ASSERT_FALSE(9 == check_neighbours_circular(8,2,g));
+    CU_ASSERT_FALSE(9 == check_neighbours_circular(7,2,g));
+    CU_ASSERT_TRUE(3 == check_neighbours_circular(4,0,g));
 }
 
 void test_check_neighb_clipped(void){

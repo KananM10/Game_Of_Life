@@ -42,9 +42,9 @@ int main() {
         return 0;
     }
 
-    g_window = SDL_CreateWindow("GameOfLife",
+    g_window = SDL_CreateWindow("Game Of Life",
                                           SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
-                                          700, 420, SDL_WINDOW_SHOWN|SDL_WINDOW_ALLOW_HIGHDPI);
+                                          420, 420, SDL_WINDOW_SHOWN|SDL_WINDOW_ALLOW_HIGHDPI);
     g_renderer = SDL_CreateRenderer(g_window, -1,SDL_RENDERER_ACCELERATED|SDL_RENDERER_PRESENTVSYNC);
     assert (g_renderer != NULL);
 
@@ -96,8 +96,6 @@ int main() {
 	free_grid(&gc);
 
     /* clean up when we're done */
-
-
     SDL_DestroyRenderer(g_renderer);
     SDL_DestroyWindow(g_window);
     SDL_Quit();

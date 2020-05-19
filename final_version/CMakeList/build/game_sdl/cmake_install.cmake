@@ -1,4 +1,4 @@
-# Install script for directory: /home/kanan/Desktop/L2_S2_2019/Development_Techniques/project_jeu_de_la_vie/merge/game_sdl
+# Install script for directory: /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/game_sdl
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
