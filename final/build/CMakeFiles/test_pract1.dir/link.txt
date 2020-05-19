@@ -1,0 +1,1 @@
+/usr/bin/cc   -rdynamic CMakeFiles/test_pract1.dir/ctest.c.o  -o test_pract1  game/libgame.a -lcunit 
