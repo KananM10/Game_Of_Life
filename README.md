@@ -1,12 +1,8 @@
 The aim of this project is to create a Game of Life for Developement Technique course.
 
-	The Game of Life is, in reality, a cellular automaton defined in 1970 by the English
-mathematician John Conway in order to try to solve a problem raised by a mathematician, 
-father of computer science, John Von Neumann. 
+	The Game of Life is, in reality, a cellular automaton defined in 1970 by the English mathematician John Conway in order to try to solve a problem raised by a mathematician, father of computer science, John Von Neumann. 
 
-	It is not strictly speaking a game: it does not require the intervention of a human player, except
-to fix the initial conditions of the game. It consists of a universe in which live cells evolve according 
-to rules precise evolution. In the original version described by John Conway, the universe is defined on a two-dimensional grid, of variable size, where each cell is a cell that can take two different states: dead or alive. The transition from one state to another is guided by the following rules of evolution:
+	It is not strictly speaking a game: it does not require the intervention of a human player, except to fix the initial conditions of the game. It consists of a universe in which live cells evolve according to rules precise evolution. In the original version described by John Conway, the universe is defined on a two-dimensional grid, of variable size, where each cell is a cell that can take two different states: dead or alive. The transition from one state to another is guided by the following rules of evolution:
 
 	• A dead cell at time t becomes alive at time t + 1 if and only if it has exactly 3 living 
 		cells in its vicinity.
