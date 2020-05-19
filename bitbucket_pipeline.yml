@@ -1,0 +1,17 @@
+image: KananM10/imgdev
+pipelines:
+  default:
+    - step:
+        name: building
+        script: 
+        - mkdir BuildCI
+        - cd BuildCI
+        - cmake ..
+        - cmake --build . --target test_pract1
+        artifacts:
+        - BuildCI/**
+    - step:
+        name: testing
+        script: 
+        - cd BuildCI
+        - ctest -V
