@@ -6,5 +6,5 @@ C_FLAGS =
 
 C_DEFINES = 
 
-C_INCLUDES = -I/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/console 
+C_INCLUDES = -I/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/console 
 

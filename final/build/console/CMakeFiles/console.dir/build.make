@@ -63,10 +63,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList
+CMAKE_SOURCE_DIR = /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build
+CMAKE_BINARY_DIR = /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/build
 
 # Include any dependencies generated for this target.
 include console/CMakeFiles/console.dir/depend.make
@@ -79,16 +79,16 @@ include console/CMakeFiles/console.dir/flags.make
 
 console/CMakeFiles/console.dir/drawer.c.o: console/CMakeFiles/console.dir/flags.make
 console/CMakeFiles/console.dir/drawer.c.o: ../console/drawer.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object console/CMakeFiles/console.dir/drawer.c.o"
-	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/console && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/console.dir/drawer.c.o   -c /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/console/drawer.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object console/CMakeFiles/console.dir/drawer.c.o"
+	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/build/console && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/console.dir/drawer.c.o   -c /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/console/drawer.c
 
 console/CMakeFiles/console.dir/drawer.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/console.dir/drawer.c.i"
-	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/console && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/console/drawer.c > CMakeFiles/console.dir/drawer.c.i
+	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/build/console && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/console/drawer.c > CMakeFiles/console.dir/drawer.c.i
 
 console/CMakeFiles/console.dir/drawer.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/console.dir/drawer.c.s"
-	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/console && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/console/drawer.c -o CMakeFiles/console.dir/drawer.c.s
+	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/build/console && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/console/drawer.c -o CMakeFiles/console.dir/drawer.c.s
 
 # Object files for target console
 console_OBJECTS = \
@@ -100,9 +100,9 @@ console_EXTERNAL_OBJECTS =
 console/libconsole.a: console/CMakeFiles/console.dir/drawer.c.o
 console/libconsole.a: console/CMakeFiles/console.dir/build.make
 console/libconsole.a: console/CMakeFiles/console.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libconsole.a"
-	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/console && $(CMAKE_COMMAND) -P CMakeFiles/console.dir/cmake_clean_target.cmake
-	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/console && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/console.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libconsole.a"
+	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/build/console && $(CMAKE_COMMAND) -P CMakeFiles/console.dir/cmake_clean_target.cmake
+	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/build/console && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/console.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 console/CMakeFiles/console.dir/build: console/libconsole.a
@@ -110,10 +110,10 @@ console/CMakeFiles/console.dir/build: console/libconsole.a
 .PHONY : console/CMakeFiles/console.dir/build
 
 console/CMakeFiles/console.dir/clean:
-	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/console && $(CMAKE_COMMAND) -P CMakeFiles/console.dir/cmake_clean.cmake
+	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/build/console && $(CMAKE_COMMAND) -P CMakeFiles/console.dir/cmake_clean.cmake
 .PHONY : console/CMakeFiles/console.dir/clean
 
 console/CMakeFiles/console.dir/depend:
-	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/console /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/console /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/console/CMakeFiles/console.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/console /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/build /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/build/console /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/build/console/CMakeFiles/console.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : console/CMakeFiles/console.dir/depend
 

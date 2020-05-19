@@ -6,17 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/console/drawer.c
+/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/console/drawer.c
 drawer.h
-/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/console/drawer.h
+/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/console/drawer.h
 
-/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/console/drawer.h
+/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/console/drawer.h
 stdio.h
 -
 ../game/game.h
-/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/game/game.h
+/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/game/game.h
 
-/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/game/game.h
+/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/game/game.h
 stdlib.h
 -
 stdio.h

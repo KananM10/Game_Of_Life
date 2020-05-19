@@ -64,10 +64,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList
+CMAKE_SOURCE_DIR = /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build
+CMAKE_BINARY_DIR = /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -160,14 +160,14 @@ game_sdl/clean: game_sdl/CMakeFiles/game_sdl.dir/clean
 CMakeFiles/test_pract1.dir/all: game/CMakeFiles/game.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_pract1.dir/build.make CMakeFiles/test_pract1.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_pract1.dir/build.make CMakeFiles/test_pract1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/CMakeFiles --progress-num=11,12 "Built target test_pract1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/build/CMakeFiles --progress-num=11,12 "Built target test_pract1"
 .PHONY : CMakeFiles/test_pract1.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_pract1.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_pract1.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/build/CMakeFiles 0
 .PHONY : CMakeFiles/test_pract1.dir/rule
 
 # Convenience name for target.
@@ -187,14 +187,14 @@ CMakeFiles/test_pract1.dir/clean:
 CMakeFiles/gameOfLife_SDL.dir/all: game_sdl/CMakeFiles/game_sdl.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gameOfLife_SDL.dir/build.make CMakeFiles/gameOfLife_SDL.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gameOfLife_SDL.dir/build.make CMakeFiles/gameOfLife_SDL.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/CMakeFiles --progress-num=7,8 "Built target gameOfLife_SDL"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/build/CMakeFiles --progress-num=7,8 "Built target gameOfLife_SDL"
 .PHONY : CMakeFiles/gameOfLife_SDL.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/gameOfLife_SDL.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/gameOfLife_SDL.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/build/CMakeFiles 0
 .PHONY : CMakeFiles/gameOfLife_SDL.dir/rule
 
 # Convenience name for target.
@@ -211,19 +211,18 @@ CMakeFiles/gameOfLife_SDL.dir/clean:
 # Target rules for target CMakeFiles/gameOfLife.dir
 
 # All Build rule for target.
-CMakeFiles/gameOfLife.dir/all: game_sdl/CMakeFiles/game_sdl.dir/all
 CMakeFiles/gameOfLife.dir/all: game/CMakeFiles/game.dir/all
 CMakeFiles/gameOfLife.dir/all: console/CMakeFiles/console.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gameOfLife.dir/build.make CMakeFiles/gameOfLife.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gameOfLife.dir/build.make CMakeFiles/gameOfLife.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/CMakeFiles --progress-num=5,6 "Built target gameOfLife"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/build/CMakeFiles --progress-num=5,6 "Built target gameOfLife"
 .PHONY : CMakeFiles/gameOfLife.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/gameOfLife.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/gameOfLife.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/build/CMakeFiles 0
 .PHONY : CMakeFiles/gameOfLife.dir/rule
 
 # Convenience name for target.
@@ -243,14 +242,14 @@ CMakeFiles/gameOfLife.dir/clean:
 game_sdl/CMakeFiles/game_sdl.dir/all:
 	$(MAKE) $(MAKESILENT) -f game_sdl/CMakeFiles/game_sdl.dir/build.make game_sdl/CMakeFiles/game_sdl.dir/depend
 	$(MAKE) $(MAKESILENT) -f game_sdl/CMakeFiles/game_sdl.dir/build.make game_sdl/CMakeFiles/game_sdl.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/CMakeFiles --progress-num=9,10 "Built target game_sdl"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/build/CMakeFiles --progress-num=9,10 "Built target game_sdl"
 .PHONY : game_sdl/CMakeFiles/game_sdl.dir/all
 
 # Build rule for subdir invocation for target.
 game_sdl/CMakeFiles/game_sdl.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game_sdl/CMakeFiles/game_sdl.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/build/CMakeFiles 0
 .PHONY : game_sdl/CMakeFiles/game_sdl.dir/rule
 
 # Convenience name for target.
@@ -270,14 +269,14 @@ game_sdl/CMakeFiles/game_sdl.dir/clean:
 game/CMakeFiles/game.dir/all:
 	$(MAKE) $(MAKESILENT) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/depend
 	$(MAKE) $(MAKESILENT) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/CMakeFiles --progress-num=3,4 "Built target game"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/build/CMakeFiles --progress-num=3,4 "Built target game"
 .PHONY : game/CMakeFiles/game.dir/all
 
 # Build rule for subdir invocation for target.
 game/CMakeFiles/game.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game/CMakeFiles/game.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/build/CMakeFiles 0
 .PHONY : game/CMakeFiles/game.dir/rule
 
 # Convenience name for target.
@@ -297,14 +296,14 @@ game/CMakeFiles/game.dir/clean:
 console/CMakeFiles/console.dir/all:
 	$(MAKE) $(MAKESILENT) -f console/CMakeFiles/console.dir/build.make console/CMakeFiles/console.dir/depend
 	$(MAKE) $(MAKESILENT) -f console/CMakeFiles/console.dir/build.make console/CMakeFiles/console.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/CMakeFiles --progress-num=1,2 "Built target console"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/build/CMakeFiles --progress-num=1,2 "Built target console"
 .PHONY : console/CMakeFiles/console.dir/all
 
 # Build rule for subdir invocation for target.
 console/CMakeFiles/console.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 console/CMakeFiles/console.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/build/CMakeFiles 0
 .PHONY : console/CMakeFiles/console.dir/rule
 
 # Convenience name for target.

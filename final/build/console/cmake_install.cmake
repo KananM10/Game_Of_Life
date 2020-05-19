@@ -1,4 +1,4 @@
-# Install script for directory: /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/console
+# Install script for directory: /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/console
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -68,10 +68,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList
+CMAKE_SOURCE_DIR = /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build
+CMAKE_BINARY_DIR = /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -157,14 +157,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/CMakeFiles /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/console/CMakeFiles/progress.marks
-	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 console/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/CMakeFiles 0
+	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/build/CMakeFiles /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/build/console/CMakeFiles/progress.marks
+	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 console/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 console/clean
+	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 console/clean
 .PHONY : clean
 
 # The main clean target
@@ -174,22 +174,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 console/preinstall
+	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 console/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 console/preinstall
+	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 console/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 console/CMakeFiles/console.dir/rule:
-	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 console/CMakeFiles/console.dir/rule
+	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 console/CMakeFiles/console.dir/rule
 .PHONY : console/CMakeFiles/console.dir/rule
 
 # Convenience name for target.
@@ -199,7 +199,7 @@ console: console/CMakeFiles/console.dir/rule
 
 # fast build rule for target.
 console/fast:
-	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build && $(MAKE) $(MAKESILENT) -f console/CMakeFiles/console.dir/build.make console/CMakeFiles/console.dir/build
+	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/build && $(MAKE) $(MAKESILENT) -f console/CMakeFiles/console.dir/build.make console/CMakeFiles/console.dir/build
 .PHONY : console/fast
 
 drawer.o: drawer.c.o
@@ -208,7 +208,7 @@ drawer.o: drawer.c.o
 
 # target to build an object file
 drawer.c.o:
-	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build && $(MAKE) $(MAKESILENT) -f console/CMakeFiles/console.dir/build.make console/CMakeFiles/console.dir/drawer.c.o
+	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/build && $(MAKE) $(MAKESILENT) -f console/CMakeFiles/console.dir/build.make console/CMakeFiles/console.dir/drawer.c.o
 .PHONY : drawer.c.o
 
 drawer.i: drawer.c.i
@@ -217,7 +217,7 @@ drawer.i: drawer.c.i
 
 # target to preprocess a source file
 drawer.c.i:
-	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build && $(MAKE) $(MAKESILENT) -f console/CMakeFiles/console.dir/build.make console/CMakeFiles/console.dir/drawer.c.i
+	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/build && $(MAKE) $(MAKESILENT) -f console/CMakeFiles/console.dir/build.make console/CMakeFiles/console.dir/drawer.c.i
 .PHONY : drawer.c.i
 
 drawer.s: drawer.c.s
@@ -226,7 +226,7 @@ drawer.s: drawer.c.s
 
 # target to generate assembly for a file
 drawer.c.s:
-	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build && $(MAKE) $(MAKESILENT) -f console/CMakeFiles/console.dir/build.make console/CMakeFiles/console.dir/drawer.c.s
+	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/build && $(MAKE) $(MAKESILENT) -f console/CMakeFiles/console.dir/build.make console/CMakeFiles/console.dir/drawer.c.s
 .PHONY : drawer.c.s
 
 # Help Target
@@ -257,6 +257,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

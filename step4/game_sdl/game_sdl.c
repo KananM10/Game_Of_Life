@@ -159,77 +159,21 @@ void evoluation (grid *g, grid *gc, int (*check_neighbours)(int, int, grid)){
 
 void display_grid ( grid g , SDL_Renderer *g_renderer, int mode) {
 	
-    SDL_Texture *textTexture; 
-    SDL_Texture *textTexture1; 
-    SDL_Texture *textTexture2; 
-    SDL_Texture *textTexture3;
-
-	char *string1;
-	if(mode)
-		string1 = "Mode: circular";
-	else
-		string1 = "Mode: clipped";
-
-	char string[16];
-	sprintf(string, "Evoluation: %d", g.age);
-
-	TTF_Init();
-    TTF_Font *font = TTF_OpenFont("ArialMT.ttf", 25);
-    SDL_Color textColor = { 131, 148, 150};
    
-   //--------------------------------------------------------------------------------------------------
-    SDL_Surface *textSurface = TTF_RenderText_Solid(font, "To evoluate push n", textColor);
-    textTexture = SDL_CreateTextureFromSurface(g_renderer, textSurface);
 
-    SDL_Rect textRect;
-    textRect.x = 420;
-    textRect.y = 10;
-    textRect.w = textSurface->w;
-    textRect.h = textSurface->h;
-
-    SDL_FreeSurface(textSurface);
-
-    //-----------------------------------------------------------------------------------------------
-    SDL_Surface *textSurface1 = TTF_RenderText_Solid(font, string, textColor);
-    textTexture1 = SDL_CreateTextureFromSurface(g_renderer, textSurface1);
-
-    SDL_Rect textRect1;
-    textRect1.x = 420;
-    textRect1.y = 40;
-    textRect1.w = textSurface1->w;
-    textRect1.h = textSurface1->h;
-
-    SDL_FreeSurface(textSurface1);
-
-    //---------------------------------------------------------------------------------------------
-    SDL_Surface *textSurface2 = TTF_RenderText_Solid(font, "To change mode push c", textColor);
-    textTexture2 = SDL_CreateTextureFromSurface(g_renderer, textSurface2);
-
-    SDL_Rect textRect2;
-    textRect2.x = 420;
-    textRect2.y = 70;
-    textRect2.w = textSurface2->w;
-    textRect2.h = textSurface2->h;
-
-    SDL_FreeSurface(textSurface2);
+    printf("\e[1;1H\e[2J"); // delete_ecran
+    printf("\033[31m");
+    printf("\033[%d;%dH", 2, 0); //move_cursor_to
+    printf("Evoluation: %d\n", g.age);
+    if(mode) printf("Mode circular\n\n");
+    else  printf("Mode clipped\n");
+    printf("To evoluate please click n. \n");
+    printf("To change mode click c\n");
+    printf("To exit from program click q\n");
+    printf("\033[?25l"); // hide_cursor
 
 
-    //------------------------------------------------------------------------------------------------
-    SDL_Surface *textSurface3 = TTF_RenderText_Solid(font, string1, textColor);
-    textTexture3 = SDL_CreateTextureFromSurface(g_renderer, textSurface3);
-
-    SDL_Rect textRect3;
-    textRect3.x = 420;
-    textRect3.y = 100;
-    textRect3.w = textSurface3->w;
-    textRect3.h = textSurface3->h;
-
-    SDL_FreeSurface(textSurface3);
-
-    //----------------------------------------------------------------------------------------------
-    TTF_Quit();
-
-    
+       
     /* Set draw colour to white */
     SDL_SetRenderDrawColor(g_renderer, 0, 43, 54, SDL_ALPHA_OPAQUE);
     
@@ -245,29 +189,28 @@ void display_grid ( grid g , SDL_Renderer *g_renderer, int mode) {
     for(int i=0; i<=g.nbrows; i++) {
         SDL_RenderDrawLine(g_renderer, 
             
-                0, CELL_SIZE*i,          /* x1, y1 */
-                400, CELL_SIZE*i /* x2, y2 */
+                10, CELL_SIZE*i+10,          /* x1, y1 */
+                410, CELL_SIZE*i+10/* x2, y2 */
         );
     }
 
     /* Draw column lines */
     for(int i=0; i<=g.nbcols; i++) {            
         SDL_RenderDrawLine(g_renderer,                 
-                CELL_SIZE*i, 0,           /* x1, y1 */                
-                CELL_SIZE*i, 400  /* x2, y2 */
+                CELL_SIZE*i+10, 10,    /* x1, y1 */                
+                CELL_SIZE*i+10, 410  /* x2, y2 */
         );
     }
-
     /* Set draw colour to blue */
     SDL_SetRenderDrawColor(g_renderer, 220, 50, 47, SDL_ALPHA_OPAQUE);
 
     /* Render the game of life */
-    for( int x=0; x<g.nbrows; x++ ) {
-        for( int y=0; y<g.nbcols; y++) {
-            if(is_alive(x, y, g)) {
+    for( int y=0; y<g.nbrows; y++ ) {
+        for( int x=0; x<g.nbcols; x++) {
+            if(is_alive(y, x, g)) {
                 SDL_Rect r = {
-                    x*CELL_SIZE, /*   x    */
-                    y*CELL_SIZE, /*   y    */
+                    x*CELL_SIZE+11, /*   x    */
+                    y*CELL_SIZE+11, /*   y    */
                     CELL_SIZE-1,   /* width  */
                     CELL_SIZE-1    /* height */
                 };
@@ -276,15 +219,9 @@ void display_grid ( grid g , SDL_Renderer *g_renderer, int mode) {
         }
     }
 
-    SDL_RenderCopy(g_renderer, textTexture, NULL, &textRect);
-    SDL_RenderCopy(g_renderer, textTexture1, NULL, &textRect1);
-    SDL_RenderCopy(g_renderer, textTexture2, NULL, &textRect2);
-    SDL_RenderCopy(g_renderer, textTexture3, NULL, &textRect3);
-
     SDL_RenderPresent(g_renderer);
 
-    SDL_DestroyTexture(textTexture);
-    SDL_DestroyTexture(textTexture1);
-    SDL_DestroyTexture(textTexture2);
-    SDL_DestroyTexture(textTexture3);
+    printf("\033[0m"); // reset
+    printf("\033[?25h"); // show_cursor
+    printf("\033[%d;%dH", g.nbrows+5, 0); //move_cursor_to
 }

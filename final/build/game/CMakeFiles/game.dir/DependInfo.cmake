@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/game/game.c" "/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/game/CMakeFiles/game.dir/game.c.o"
+  "/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/game/game.c" "/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/build/game/CMakeFiles/game.dir/game.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
