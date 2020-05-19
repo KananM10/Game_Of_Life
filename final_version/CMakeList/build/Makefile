@@ -177,6 +177,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named gameOfLife_SDL
+
+# Build rule for target.
+gameOfLife_SDL: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gameOfLife_SDL
+.PHONY : gameOfLife_SDL
+
+# fast build rule for target.
+gameOfLife_SDL/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gameOfLife_SDL.dir/build.make CMakeFiles/gameOfLife_SDL.dir/build
+.PHONY : gameOfLife_SDL/fast
+
+#=============================================================================
 # Target rules for targets named gameOfLife
 
 # Build rule for target.
@@ -202,13 +215,66 @@ game_sdl/fast:
 	$(MAKE) $(MAKESILENT) -f game_sdl/CMakeFiles/game_sdl.dir/build.make game_sdl/CMakeFiles/game_sdl.dir/build
 .PHONY : game_sdl/fast
 
+#=============================================================================
+# Target rules for targets named game
+
+# Build rule for target.
+game: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game
+.PHONY : game
+
+# fast build rule for target.
+game/fast:
+	$(MAKE) $(MAKESILENT) -f game/CMakeFiles/game.dir/build.make game/CMakeFiles/game.dir/build
+.PHONY : game/fast
+
+#=============================================================================
+# Target rules for targets named console
+
+# Build rule for target.
+console: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 console
+.PHONY : console
+
+# fast build rule for target.
+console/fast:
+	$(MAKE) $(MAKESILENT) -f console/CMakeFiles/console.dir/build.make console/CMakeFiles/console.dir/build
+.PHONY : console/fast
+
+main.o: main.c.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gameOfLife.dir/build.make CMakeFiles/gameOfLife.dir/main.c.o
+.PHONY : main.c.o
+
+main.i: main.c.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gameOfLife.dir/build.make CMakeFiles/gameOfLife.dir/main.c.i
+.PHONY : main.c.i
+
+main.s: main.c.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gameOfLife.dir/build.make CMakeFiles/gameOfLife.dir/main.c.s
+.PHONY : main.c.s
+
 main_sdl.o: main_sdl.c.o
 
 .PHONY : main_sdl.o
 
 # target to build an object file
 main_sdl.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/gameOfLife.dir/build.make CMakeFiles/gameOfLife.dir/main_sdl.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gameOfLife_SDL.dir/build.make CMakeFiles/gameOfLife_SDL.dir/main_sdl.c.o
 .PHONY : main_sdl.c.o
 
 main_sdl.i: main_sdl.c.i
@@ -217,7 +283,7 @@ main_sdl.i: main_sdl.c.i
 
 # target to preprocess a source file
 main_sdl.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/gameOfLife.dir/build.make CMakeFiles/gameOfLife.dir/main_sdl.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gameOfLife_SDL.dir/build.make CMakeFiles/gameOfLife_SDL.dir/main_sdl.c.i
 .PHONY : main_sdl.c.i
 
 main_sdl.s: main_sdl.c.s
@@ -226,7 +292,7 @@ main_sdl.s: main_sdl.c.s
 
 # target to generate assembly for a file
 main_sdl.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/gameOfLife.dir/build.make CMakeFiles/gameOfLife.dir/main_sdl.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gameOfLife_SDL.dir/build.make CMakeFiles/gameOfLife_SDL.dir/main_sdl.c.s
 .PHONY : main_sdl.c.s
 
 # Help Target
@@ -241,8 +307,14 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... console"
+	@echo "... game"
 	@echo "... gameOfLife"
+	@echo "... gameOfLife_SDL"
 	@echo "... game_sdl"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 	@echo "... main_sdl.o"
 	@echo "... main_sdl.i"
 	@echo "... main_sdl.s"

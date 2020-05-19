@@ -77,29 +77,30 @@ include CMakeFiles/gameOfLife.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/gameOfLife.dir/flags.make
 
-CMakeFiles/gameOfLife.dir/main_sdl.c.o: CMakeFiles/gameOfLife.dir/flags.make
-CMakeFiles/gameOfLife.dir/main_sdl.c.o: ../main_sdl.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/gameOfLife.dir/main_sdl.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/gameOfLife.dir/main_sdl.c.o   -c /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/main_sdl.c
+CMakeFiles/gameOfLife.dir/main.c.o: CMakeFiles/gameOfLife.dir/flags.make
+CMakeFiles/gameOfLife.dir/main.c.o: ../main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/gameOfLife.dir/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/gameOfLife.dir/main.c.o   -c /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/main.c
 
-CMakeFiles/gameOfLife.dir/main_sdl.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/gameOfLife.dir/main_sdl.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/main_sdl.c > CMakeFiles/gameOfLife.dir/main_sdl.c.i
+CMakeFiles/gameOfLife.dir/main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/gameOfLife.dir/main.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/main.c > CMakeFiles/gameOfLife.dir/main.c.i
 
-CMakeFiles/gameOfLife.dir/main_sdl.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/gameOfLife.dir/main_sdl.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/main_sdl.c -o CMakeFiles/gameOfLife.dir/main_sdl.c.s
+CMakeFiles/gameOfLife.dir/main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/gameOfLife.dir/main.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/main.c -o CMakeFiles/gameOfLife.dir/main.c.s
 
 # Object files for target gameOfLife
 gameOfLife_OBJECTS = \
-"CMakeFiles/gameOfLife.dir/main_sdl.c.o"
+"CMakeFiles/gameOfLife.dir/main.c.o"
 
 # External object files for target gameOfLife
 gameOfLife_EXTERNAL_OBJECTS =
 
-gameOfLife: CMakeFiles/gameOfLife.dir/main_sdl.c.o
+gameOfLife: CMakeFiles/gameOfLife.dir/main.c.o
 gameOfLife: CMakeFiles/gameOfLife.dir/build.make
-gameOfLife: game_sdl/libgame_sdl.a
+gameOfLife: game/libgame.a
+gameOfLife: console/libconsole.a
 gameOfLife: game_sdl/libgame_sdl.a
 gameOfLife: CMakeFiles/gameOfLife.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable gameOfLife"

@@ -141,6 +141,7 @@ int check_neighbours_clipped(int i, int j, grid g){
 	v += i < r -1 && j > 0 && is_alive(i+1, j-1, g); 	// bottom left
 	v += i < r -1 && is_alive(i+1, j, g); 				// bottom same col
 	v += i < r -1 && j < c && is_alive(i+1, j+1, g); 	// bottom right
+	// printf("(%d,%d)-->%d\n", i,j,v);
 	return v;
 }
 

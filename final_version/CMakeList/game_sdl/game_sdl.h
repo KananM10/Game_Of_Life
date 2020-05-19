@@ -5,7 +5,6 @@
 #include <stdio.h>
 #include <assert.h>
 #include <SDL2/SDL.h>
-// #include <SDL2/SDL_ttf.h>
 #include <string.h>
 
 

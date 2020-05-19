@@ -6,19 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/game_sdl/game_sdl.h
+/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/console/drawer.h
+stdio.h
+-
+../game/game.h
+/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/game/game.h
+
+/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/game/game.h
 stdlib.h
 -
 stdio.h
 -
-assert.h
--
-SDL2/SDL.h
--
-string.h
--
 
-/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/main_sdl.c
-./game_sdl/game_sdl.h
-/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/game_sdl/game_sdl.h
+/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/main.c
+./console/drawer.h
+/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/console/drawer.h
+./game/game.h
+/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final_version/CMakeList/game/game.h
 

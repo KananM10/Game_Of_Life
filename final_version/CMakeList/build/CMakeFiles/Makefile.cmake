@@ -10,6 +10,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../CMakeLists.txt"
   "CMakeFiles/3.17.2/CMakeCCompiler.cmake"
   "CMakeFiles/3.17.2/CMakeSystem.cmake"
+  "../console/CMakeLists.txt"
+  "../game/CMakeLists.txt"
   "../game_sdl/CMakeLists.txt"
   "/usr/lib/x86_64-linux-gnu/cmake/SDL2/sdl2-config.cmake"
   "/usr/local/share/cmake-3.17/Modules/CMakeCCompiler.cmake.in"
@@ -94,10 +96,15 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/3.17.2/CMakeCCompiler.cmake"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "game_sdl/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "game/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "console/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/gameOfLife_SDL.dir/DependInfo.cmake"
   "CMakeFiles/gameOfLife.dir/DependInfo.cmake"
   "game_sdl/CMakeFiles/game_sdl.dir/DependInfo.cmake"
+  "game/CMakeFiles/game.dir/DependInfo.cmake"
+  "console/CMakeFiles/console.dir/DependInfo.cmake"
   )

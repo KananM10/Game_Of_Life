@@ -158,23 +158,22 @@ void evoluation (grid *g, grid *gc, int (*check_neighbours)(int, int, grid)){
 //---------------------------------------------------------------------
 
 void display_grid ( grid g , SDL_Renderer *g_renderer, int mode) {
-
+	
+   
 
     printf("\e[1;1H\e[2J"); // delete_ecran
-    printf("\033[31m  ");
-
-    if(mode) 
-        printf("Mode circular\n");
-    else 
-        printf("Mode clipped\n");
-    printf("To evoluate please click n. \n\n");
+    printf("\033[31m");
+    printf("\033[%d;%dH", 2, 0); //move_cursor_to
     printf("Evoluation: %d\n", g.age);
+    if(mode) printf("Mode circular\n\n");
+    else  printf("Mode clipped\n");
+    printf("To evoluate please click n. \n");
     printf("To change mode click c\n");
     printf("To exit from program click q\n");
     printf("\033[?25l"); // hide_cursor
 
 
-	   
+       
     /* Set draw colour to white */
     SDL_SetRenderDrawColor(g_renderer, 0, 43, 54, SDL_ALPHA_OPAQUE);
     
@@ -210,8 +209,8 @@ void display_grid ( grid g , SDL_Renderer *g_renderer, int mode) {
         for( int x=0; x<g.nbcols; x++) {
             if(is_alive(y, x, g)) {
                 SDL_Rect r = {
-                    x*CELL_SIZE+10, /*   x    */
-                    y*CELL_SIZE+10, /*   y    */
+                    x*CELL_SIZE+11, /*   x    */
+                    y*CELL_SIZE+11, /*   y    */
                     CELL_SIZE-1,   /* width  */
                     CELL_SIZE-1    /* height */
                 };
@@ -224,5 +223,5 @@ void display_grid ( grid g , SDL_Renderer *g_renderer, int mode) {
 
     printf("\033[0m"); // reset
     printf("\033[?25h"); // show_cursor
-    printf("\033[%d;%dH", g.nbrows+5+10, 0); //move_cursor_to
+    printf("\033[%d;%dH", g.nbrows+5, 0); //move_cursor_to
 }
