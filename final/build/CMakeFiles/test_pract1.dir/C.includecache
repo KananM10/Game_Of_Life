@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/ctest.c
+stdio.h
+-
+CUnit/Basic.h
+-
+CUnit/Console.h
+-
+CUnit/CUnit.h
+-
+./game/game.h
+/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/game/game.h
+
+/home/kanan/Desktop/L2_S2_2019/Development_Techniques/Game_Of_Life/final/game/game.h
+stdlib.h
+-
+stdio.h
+-
+

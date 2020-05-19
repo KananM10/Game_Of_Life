@@ -1,6 +1,6 @@
 CC = gcc
 
-all: gameOfLife
+all: clean gameOfLife
 
 gameOfLife: main.o drawer.o game.o
 	$(CC) main.o drawer.o game.o -o gameOfLife
