@@ -1,1 +1,0 @@
-/usr/bin/cc   -rdynamic CMakeFiles/gameOfLife.dir/main.c.o  -o gameOfLife  game/libgame.a console/libconsole.a 
